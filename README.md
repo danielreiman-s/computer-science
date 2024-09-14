@@ -1,4 +1,4 @@
-### Guide: Running a Java Project and Managing Changes
+### Guide
 
 #### Creating a New Java Project
 
