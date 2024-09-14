@@ -1,19 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        // exDeposit();
-        exTransfer();
-    }
+        BankAccount bob = new BankAccount(1000, -1000);
+        BankAccount lisa = new BankAccount(1000, -1000);
 
-    public static void exDeposit() {
-        BankAccount acct1 = new BankAccount(3000, -1000);
-        acct1.deposit(500);
-        System.out.println(acct1.getBalance());
-    }
+        System.out.println("\nBefore Transfer 01\n----------------");
+        System.out.println("Bob's balance: " + bob.getBalance());
+        System.out.println("Lisa's balance: " + lisa.getBalance());
 
-    public static void exTransfer() {
-        BankAccount acct1 = new BankAccount(3000, -1000);
-        BankAccount acct2 = new BankAccount(3000, -1000);
-        boolean success = acct1.transfer(acct2, 500);
-        System.out.println("Transfer success: " + success);
+        boolean transfer01Success = bob.transfer(lisa, 500);
+
+        if (transfer01Success) {
+            System.out.println("\nSYSTEM: Transaction 01 Completed Successfully");
+            System.out.println("\nAfter Transfer 01\n----------------");
+            System.out.println("Bob's balance: " + bob.getBalance());
+            System.out.println("Lisa's balance: " + lisa.getBalance());
+        }
+
+        boolean transfer02Success = bob.transfer(lisa, 1600);
+        if (transfer02Success) {
+            System.out.println("\nTransaction 02 Completed Successfully");
+            System.out.println("\nAfter Transfer 02\n----------------");
+            System.out.println("Bob's balance: " + bob.getBalance());
+            System.out.println("Lisa's balance: " + lisa.getBalance());
+        } else {
+            System.out.println("\nSYSTEM: Bob have exceeded his account limits, the transaction could not be completed.");
+        }
+        
     }
 }
