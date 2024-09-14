@@ -53,3 +53,4 @@ This ensures that the compiler generates `.class` files for all necessary classe
 ```bash
 java Main
 ```
+##### For any other errors related to Git, please use [chatgpt.com](https://chatgpt.com).
