@@ -1,3 +1,5 @@
+# 🚨 Ensure Codespaces is Stopped After Use 🚨
+
 ### Guide
 
 #### Creating a New Java Project
