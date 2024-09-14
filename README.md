@@ -38,3 +38,16 @@ Your project will now run.
 3. **Commit and Push:**
    - Click **"Commit"** to save your changes.
    - Then, click **"Push"** to upload your changes to the repository.
+
+### Known Errors
+If you compile only one Java file and it depends on another, you'll get "class not found" errors. To fix this, compile all related files together:
+
+```bash
+javac Main.java BankAccount.java
+```
+
+This ensures that the compiler generates `.class` files for all necessary classes. Then you can run your program:
+
+```bash
+java Main
+```
