@@ -17,7 +17,18 @@ public class BankAccount {
     public void deposit(int amount) {
         balance = balance + amount;
     }
+
+    public boolean transfer(BankAccount target, int amount) {
+        if (balance - amount < minBalance) {
+            return false;
+        }
+
+        this.balance -= amount;
+        target.deposit(amount);
+        return true;
+    }
+
     public int getBalance() {
         return balance;
-    }
+    }    
 }
