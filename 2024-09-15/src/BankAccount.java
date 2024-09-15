@@ -1,8 +1,10 @@
 public class BankAccount {
     private int minBalance;
     private int balance;
+    private String owner;
     
-    public BankAccount(int balance, int minBalance) {
+    public BankAccount(String owner, int balance, int minBalance) {
+    	this.owner = owner;
         this.balance = balance;
         this.minBalance = minBalance;
     }
@@ -30,5 +32,19 @@ public class BankAccount {
 
     public int getBalance() {
         return balance;
-    }    
+    }
+    
+    public String getOwner() {
+    	return this.owner;
+    }
+    
+    public void setOwner(String newValue) {
+    	this.owner = newValue;
+    }
+    
+    public String toString() {
+    	return  "Balance of " + this.owner + ": " + this.balance;
+    }
+    
+    
 }
