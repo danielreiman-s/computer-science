@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Volcano Name: " + volcano.getName());
         System.out.println("Count of Measurements: " + volcano.getCount());
 
-        System.out.printf("Average Temperature: %.2f%n", volcano.getAvg());
+        System.out.printf("Average Temperature: " + volcano.getAvg());
 
         int maxUnderValue = 1500;
         int maxIndex = volcano.getMaxUnderIndex(maxUnderValue);
