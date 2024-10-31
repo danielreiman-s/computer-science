@@ -2,13 +2,29 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println(ex1(4));
+		System.out.println(ex2(4));
 		System.out.println(ex3(4));
 		System.out.println(ex4(4));
 		System.out.println(ex5(20, 5));
 		System.out.println(ex6(3, 20));
 		System.out.println(ex7(20, 3));
 		System.out.println(ex9(200, 0, 0));
+	}
+	public static int ex1(int n) {
+		if (n == 0) {
+			return 0;
+		}
+		
+		return n + ex1(n-1);
+	}
+	
+	public static int ex2(int n) {
+		if (n == 0) {
+			return 1;
+		}
+		
+		return n * ex2(n-1);
 	}
 	
 	public static int ex3(int n) {
