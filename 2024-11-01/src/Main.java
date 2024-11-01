@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		int[] array = {29, 29, 29, 29};
+		int[] array = {9, 10, 100, 120};
 		System.out.println(ex14(array, 2, 0));
 		System.out.println(ex15(array, 2, 0));
 		System.out.println(ex16(array, 2, 0));
@@ -71,14 +71,13 @@ public class Main {
 	
 	public static boolean ex18(int[] array, int currentI) {
 		if (!isPrime(array[currentI], 2)) {
-			return false;
+			return true;
 		}
 		
 		if (currentI == array.length - 1) {
-			return true;
+			return false;
 		}
 		
 		return ex18(array, currentI + 1);
 	}
-
 }
