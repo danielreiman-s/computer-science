@@ -29,4 +29,19 @@ public class Main {
 		jobs.remove();
 	}
 	
+	// EX 9
+//	public static int delivery(int size, Queue<FoodDeliveryPerson> d) {
+//		d.insert(null);
+//		while (d.head() != null) {
+//			FoodDeliveryPerson current = d.remove();
+//			
+//			if (current.getSize() >= size) {
+//				return current.getID();
+//			}
+//			
+//			d.insert(current);
+//		}
+//		d.remove();
+//	}
+	
 }
