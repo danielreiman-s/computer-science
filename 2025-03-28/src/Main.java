@@ -27,7 +27,7 @@ class Main {
 
 	public static boolean checkAllEven(BinNode<Integer> t, int num) {
 	    if (t == null)
-	        return true;
+	        return false;
 
 	    if (isLeaf(t)) {
 	        int number = t.getValue() + num * 10;
