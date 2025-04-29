@@ -23,10 +23,11 @@ public class Main {
 		
 		if (f != null) {
 			if (getNodeCount(f.getPassengers()) < f.getCapacity()) {
-				f.getPassengers().setNext(new Node<Passenger>(passenger));
-			} else {
 				passenger.setPermPass(true);
 				passenger.setKm(passenger.getKm() + minKM);
+
+				f.getPassengers().setNext(new Node<Passenger>(passenger));
+			} else {
 				f.getWaiting().insert(passenger);
 			}
 		}
@@ -38,8 +39,18 @@ public class Main {
 		
 		while (temp.getNext() != null) {
 			count++;
+			
+			temp = temp.getNext();
+
 		}
 		
 		return count;
+	}
+	public static void goToLastNode(Node<Passenger> passengers) {
+		
+		while (passengers.getNext() != null) {
+			passengers = passengers.getNext();
+		}
+		
 	}
 }
